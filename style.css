@@ -10,6 +10,10 @@ html {
     background: #f2f2f2;
 } 
 
+html {
+  scroll-behavior: smooth;
+}
+
 section {
     padding: 40px 20px;
 }
@@ -291,7 +295,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: larger;
+    font-size: xx-large;
 }
 
 .heading h1 span{
@@ -315,12 +319,61 @@ section {
 
 }
 
-.button{
+.button-container{
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
+}
+
+.button{
+    
+    cursor:grab;
+    
 
 }
+
+.button:hover{
+    background-color: rgb(255, 162, 0);
+    border: solid rgb(255, 162, 0);
+    border-radius: 4px;
+}
+
+.enjoy{
+    display: flex;
+    color: rgb(255, 162, 0);
+    justify-content: center;
+}
+
+/* about us page desiging*/
+
+.aboutus{
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+}
+
+.mission {
+    display: flex;
+    align-items: center; 
+    
+    gap: 10px;             
+}
+
+
+
+.mission h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: rgb(255, 162, 0);             /* remove default margin */
+}
+
+.missionpara{
+    color: gray;
+    font-size: large;
+}
+
+
 
 
 
