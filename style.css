@@ -82,6 +82,7 @@ section {
     font-size: 2rem;
     font-weight: 800;
     font-style: normal;
+    
 }
 
 /* menu*/
@@ -103,10 +104,12 @@ section {
 
 /*reservation*/
 
-.reservation{
+.reservation a{
     font-size: 2rem;
     font-weight: 800;
     font-style: normal;
+    color:white;
+    text-decoration: none;
 }
 
 /*signin*/
@@ -126,6 +129,7 @@ section {
     font-size: 2rem;
     font-weight: 800;
     font-style: normal;
+    cursor: grab;
 }
 
 /*signinlogo*/
@@ -343,37 +347,299 @@ section {
     display: flex;
     color: rgb(255, 162, 0);
     justify-content: center;
+    font-size: xx-large;
 }
 
 /* about us page desiging*/
 
-.aboutus{
+h1 {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 2.5em; 
+}
+
+
+.main-content {
+    
     display: flex;
+    justify-content: center; 
+    max-width: 1200px; 
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.left-column {
+    
+    flex: 0 0 250px; 
+    padding-right: 50px;
+}
+
+.right-column {
+   
+    flex: 1;
+    display: flex; 
+    align-items: flex-start;
+}
+
+
+.section-heading {
+    margin-bottom: 25px; 
+}
+
+.section-heading h2 {
+    font-size: 1.5em;
+    font-weight: normal; 
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 162, 0);
+    
+}
+
+
+.mission-active h2 {
+    color: rgb(255, 162, 0); 
+    font-weight: bold; 
+}
+
+
+.separator-line {
+    width: 100%;
+    height: 1px;
+    background-color: #ccc; 
+    margin-top: 5px;
+}
+
+
+.text-box {
+    
+    margin-top: 40px; 
+    max-width: 450px;
+}
+
+.text-box p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: gray;
+    font-size: large; 
+}
+
+.image-box {
+    
+    flex: 0 0 400px; 
+    margin-left: 30px; 
+}
+
+.image-box img {
+    max-width: 100%; 
+    height: auto;
+}
+
+
+.stats-section {
+    
+    display: flex;
+    justify-content: space-around; 
+    max-width: 1200px;
+    margin: 0px auto 40px auto; 
+    padding: 30px 20px;
+    text-align: center; 
+}
+
+.stat-item {
+    padding: 0 20px;
+   
+    border-right: 1px solid #ddd; 
+}
+
+.stat-item:last-child {
+    
+    border-right: none;
+}
+
+.stat-number {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: rgb(255, 162, 0); 
+    margin: 0;
+}
+
+.stat-label {
+    font-size: 1em;
+    color: #555;
+    margin-top: 5px;
+}
+
+
+.section-divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 0 10%; 
+}
+
+
+/* reservation desiging*/
+
+.reservation{
+    display: flex;
+    align-items: center;
     justify-content: center;
     font-size: xx-large;
+
 }
 
-.mission {
-    display: flex;
-    align-items: center; 
-    
-    gap: 10px;             
-}
-
-
-
-.mission h1 {
-    font-size: 2rem;
-    margin: 0;
-    color: rgb(255, 162, 0);             /* remove default margin */
-}
-
-.missionpara{
+.homepoint{
     color: gray;
-    font-size: large;
+    font-weight: lighter;
+    
+}
+
+.diningnav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: gray;
+}
+
+.dining i{
+    color: black;
+}
+
+.delivery i{
+    color: black;
+}
+
+.nightlife i{
+    color: black;
+}
+
+.dining-border:hover{
+    border: solid rgb(255, 162, 0);
+    border-radius: 4px;
+}
+
+.deliveryborder:hover{
+    border: solid rgb(255, 162, 0);
+    border-radius: 4px;
+}
+
+.nightlifeborder:hover{
+    border: solid rgb(255, 162, 0);
+    border-radius: 4px;
 }
 
 
+.diningbox {
+    height: 400px;
+    background-color: white;
+    padding: 20px 0px 15px;
+    margin-top: 15px;
+
+    
+}
+
+.diningbox{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.diningbox1{
+    background-image: url(diningtable.jpeg);
+    height: 300px;
+    background-size: cover;
+    margin-top: 1rem;
+    margin-bottom: 1 rem;
+}
+
+.diningbox2{
+    background-image: url(diningtable.jpeg);
+    height: 300px;
+    background-size: cover;
+    margin-top: 1rem;
+    margin-bottom: 1 rem;
+}
+
+.diningbox3{
+    background-image: url(diningtable.jpeg);
+    height: 300px;
+    background-size: cover;
+    margin-top: 1rem;
+    margin-bottom: 1 rem;
+}
+
+.diningbox p {
+    margin-top: 85%;
+    font-weight: bold;
+    
+    color: black;
+    text-align: center;
+}
+
+
+
+.diningbox h2{
+    margin-top: 90%;
+    text-align: center;
+}
+
+.diningbox button{
+   display: block;         
+  width: 80%;  
+  margin: 0 auto 16px;           
+  margin-top: 100%;      
+  padding: 12px 24px;
+  background-color: rgb(255, 162, 0);
+  font-weight: bold;
+  border-color: black;
+  border-radius: 4px;
+  
+    
+}
+
+.diningbox button:hover{
+    border: solid black ;
+}
+
+/* footer*/
+
+.footpanel{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.burgerpoint{
+    color: white;
+}
+
+.burgerpoint span{
+    color: rgb(255, 162, 0);
+}
+.company{
+    color: white;
+}
+
+ul {
+    margin-top: 20px;
+}
+
+ul a {
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: #dddddd;
+}
+
+.add h2 {
+    color: white;
+    font-size: large;
+    font-weight: 300;
+}
+
+.add i{
+    color: red;
+}
 
 
 
