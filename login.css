@@ -1,0 +1,125 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container */
+.login-container {
+  background: #000;
+  padding: 40px;
+  border-radius: 12px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.2);
+}
+
+.login-container h2 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.login-container h2 span {
+  color: #f1a500;
+}
+
+.subtitle {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* Input fields */
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #222;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.input-group i {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #f1a500;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #f1a500;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background: #ffbb33;
+}
+
+/* Options */
+.options {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.options a {
+  color: #f1a500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.options a:hover {
+  color: #fff;
+}
+
+/* Social login */
+.social-login {
+  margin-top: 20px;
+}
+
+.social-login p {
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #bbb;
+}
+
+.social-icons a {
+  margin: 0 8px;
+  font-size: 22px;
+  color: #f1a500;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
