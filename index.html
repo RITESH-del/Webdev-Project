@@ -5,132 +5,336 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div class="nav-logoborder">
-                <div class="logo">
-                    <p><span>Burger</span>Point</p>
-                    
-                </div>
-            </div>
-
-            <div class="homeborder">
-                <div class="home">
-                    <p>Home</p>
-                </div>
-            </div>
-            <div class="menuborder">
-                <div class="menu">
-                    <p>Menu</p>
-                </div>
-            </div>
-            <div class="aboutborder">
-                <div class="about">
-                    <a href="about.html">About us</a>
-                </div>
-            </div>
-            <div class="reservationborder">
-                <div class="reservation">
-                    <a href="reservation.html">Reservation</a>
-                </div>
-            </div>
-            <div class="signinborder">
-                <div class="signin">
-                    <a href="signin.html">Sign in</a>
-                </div>
-            </div>
-            <div class="getappborder">
-                <div class="getapp">
-                    <p>Get App</p>
-                </div>
-            </div>
+    <header class="Header">
+        <div class="Header_logo">
+            <h1 class="Header_title"><span>Burger</span>Point</h1>
         </div>
+
+        <nav class="nav">
+            <ul class="nav_list">
+                <li class="nav_item"><a href="#HOME">Home</a></li>
+                <li class="nav_item"><a href="#MENU">Menu</a></li>
+                <li class="nav_item"><a href="#ABOUT">About us</a></li>
+                <li class="nav_item"><a href="#RESERVATION">Reservation</a></li>
+            </ul>
+        </nav>
+
+        <div class="Header_btn">
+            <button class="btn primary-btn">Sign In</button>
+            <button class="btn outline-btn">Get the App <i class="ri-arrow-right-up-line"></i></button>
+        </div>
+
     </header>
 
-    <section class="photos">
-    <h1><span>$0</span> DELIVERY FEE ON <br> FIRST <span>ORDER</span></h1>
+    <section id="HOME">
+        <div class="Home-form">
+            <h1 class="Home-form_header"><span>$0</span> DELIVERY FEES ON FIRST <span>ORDER</span></h1>
 
-    <div class="search-box">
-      <input type="text" placeholder="Search for menu items...">
-      <div class="location-box">
-        <input type="text" placeholder="Enter your Delivery location">
-        
+            <form action="">
+                <div class="input-container">
+                    <i class="ri-search-line"></i>
+                    <input type="text" placeholder="Search for Menu items...">
+                </div>
+<br>
+
+            <div style="display: flex;">
+                <div class="input-container">
+                    <i class="ri-map-pin-line"></i>
+                    <input type="text" placeholder="Enter your Delivery Location"
+                    style="width:350px;">
+                </div>
+                <button class="btn primary-btn"><i class="ri-map-2-line"></i></button>
+            </div>
+                
+            </form>
+        </div>
+    </section>
+
+    <section id="MENU">
+        <div class="Menu-header">
+
+            <h1>Order our best options</h1>
+
+            <div class="Menu-header-btn">
+                <button class="Menu-btn previos"><i class="ri-arrow-left-line"></i></button>
+                <button class="Menu-btn forward"><i class="ri-arrow-right-line"></i></button>
+            </div>
+        </div>
+
+        <div class="Menu-carousel">
+
+            <div class="Menu-card">
+                <div class="Menu-card_image">
+                    <img src="assets/image 2.png" alt="pizzas img">
+                    <h2>ITEMS AT $19</h2>
+                </div>
+
+                <div class="Menu-card_body">
+                    <div class="Menu-card_title">
+                    <h2>
+                        <svg width="24" height="24" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="15" cy="15" r="15" fill="#FEBC2F"/>
+<path d="M15.0001 20.8252L8.67922 24.5454L10.0909 17.0749L4.77274 11.9038L11.966 11.007L15.0001 4.09082L18.034 11.007L25.2273 11.9038L19.9092 17.0749L21.3209 24.5454L15.0001 20.8252Z" fill="white"/>
+</svg>
+                        4.4 <span>•10-15 mins</span></h2>
+
+                    <div class="Menu-card_subtitles">Pizzas</div>
+                    <div class="Menu-card_subtitles">Sector-11</div>
+
+                    </div>
+                </div>
+            </div>
+
+             <div class="Menu-card">
+                <div class="Menu-card_image">
+                    <img src="assets/image 3.png" alt="pizzas img">
+                    <h2>ITEMS AT $19</h2>
+                </div>
+
+                <div class="Menu-card_body">
+                    <div class="Menu-card_title">
+                    <h2>
+                        <svg width="24" height="24" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="15" cy="15" r="15" fill="#FEBC2F"/>
+<path d="M15.0001 20.8252L8.67922 24.5454L10.0909 17.0749L4.77274 11.9038L11.966 11.007L15.0001 4.09082L18.034 11.007L25.2273 11.9038L19.9092 17.0749L21.3209 24.5454L15.0001 20.8252Z" fill="white"/>
+</svg>
+                        4.4 <span>•10-15 mins</span></h2>
+
+                    <div class="Menu-card_subtitles">Pizzas</div>
+                    <div class="Menu-card_subtitles">Sector-11</div>
+
+                    </div>
+                </div>
+            </div>
+
+
+             <div class="Menu-card">
+                <div class="Menu-card_image">
+                    <img src="assets/image 4.png" alt="pizzas img">
+                    <h2>ITEMS AT $19</h2>
+                </div>
+
+                <div class="Menu-card_body">
+                    <div class="Menu-card_title">
+                    <h2>
+                        <svg width="24" height="24" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="15" cy="15" r="15" fill="#FEBC2F"/>
+<path d="M15.0001 20.8252L8.67922 24.5454L10.0909 17.0749L4.77274 11.9038L11.966 11.007L15.0001 4.09082L18.034 11.007L25.2273 11.9038L19.9092 17.0749L21.3209 24.5454L15.0001 20.8252Z" fill="white"/>
+</svg>
+                        4.4 <span>•10-15 mins</span></h2>
+
+                    <div class="Menu-card_subtitles">Pizzas</div>
+                    <div class="Menu-card_subtitles">Sector-11</div>
+
+                    </div>
+                </div>
+            </div>
+
+             <div class="Menu-card">
+                <div class="Menu-card_image">
+                    <img src="assets/image 2.png" alt="pizzas img">
+                    <h2>ITEMS AT $19</h2>
+                </div>
+
+                <div class="Menu-card_body">
+                    <div class="Menu-card_title">
+                    <h2>
+                        <svg width="24" height="24" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="15" cy="15" r="15" fill="#FEBC2F"/>
+<path d="M15.0001 20.8252L8.67922 24.5454L10.0909 17.0749L4.77274 11.9038L11.966 11.007L15.0001 4.09082L18.034 11.007L25.2273 11.9038L19.9092 17.0749L21.3209 24.5454L15.0001 20.8252Z" fill="white"/>
+</svg>
+                        4.4 <span>•10-15 mins</span></h2>
+
+                    <div class="Menu-card_subtitles">Pizzas</div>
+                    <div class="Menu-card_subtitles">Sector-11</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ABOUT">
+        <div class="About-header">
+            <hr>
+            <h2>ABOUT US</h2>
+            <hr>
+        </div>
+
+    <div class="About-body">
+
+        <div class="About-sidebar">
+            <h3>Mission <i class="ri-arrow-right-line"></i></h3>
+            <hr>
+            <h3>Vission</h3>
+            <hr>
+            <h3>Values</h3>
+        </div>
+
+        <div class="About-copy">
+            Our mission is to elevate the quality of life of the urban consumer by offering unparalleled convenience. what makes us tick. It’s what makes us get out of bed and say, “Let’s do this.
+        </div>
+
+        <div class="About-image">
+            <img src="assets/scooter.png" alt="scotter image">
+        </div>
+
+
+
+        </div>
+
+        <br><br><br>
+
+        <hr>
+    <div class="About-footer">
+        <div class="About-footer_title">
+            <h1>3 Billion+</h1>
+            <h2>orders delivered</h2>
+        </div>
+
+        <div class="About-footer_title">
+            <h1>220k+</h1>
+            <h2>resturants partners</h2>
+        </div>
+
+        <div class="About-footer_title">
+            <h1>520k+</h1>
+            <h2>delivery partners</h2>
+        </div>
+
+        <div class="About-footer_title">
+            <h1>680+</h1>
+            <h2>cities in India</h2>
+        </div>
+    </div>
+    <hr>
+    </section>
+
+    <section id="RESERVATION">
+        <div class="About-header">
+            <hr>
+            <h2>RESERVATION</h2>
+            <hr>
+        </div>
+        <hr>
+
+        <div class="Reservation-body">
+            <p>Home / India / <span>Nearby Resturants</span></p>
+
+            <div class="Reservation-tabs">
+                <button class="tab"><i class="ri-restaurant-2-fill"></i> Dinning Out</button>
+                <button class="tab"><i class="ri-truck-line"></i> Delivery</button>
+                <button class="tab"><i class="ri-beer-line"></i>  Nightlife</button>
+            </div>
+
+            <div class="tabContent">
+                <div class="Menu-card">
+                <div class="Menu-card_image">
+                    <img src="assets/image 7.png" alt="pizzas img">
+                    <h2>ITEMS AT $19 
+                        <span style="float: right; transform: translateX(-20px);"><svg width="24" height="24" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="15" cy="15" r="15" fill="#FEBC2F"/>
+<path d="M15.0001 20.8252L8.67922 24.5454L10.0909 17.0749L4.77274 11.9038L11.966 11.007L15.0001 4.09082L18.034 11.007L25.2273 11.9038L19.9092 17.0749L21.3209 24.5454L15.0001 20.8252Z" fill="white"/>
+</svg> 4.4</span>
+                    </h2>
+                </div>
+
+                <div class="Menu-card_body">
+                    <div class="Menu-card_title">
+                    <div style="display:flex; justify-content: space-between;"><span>Italian•Pizza</span> <span style="transform: translateX(50px);">$20 for two</span></div>
+
+                    <div class="Menu-card_subtitles">Sector- 11, City <span style="float: right; transform: translateX(50px)">2.2 km</span></div>
+                    
+                    <button><i class="ri-calendar-check-line"></i>Seat Available</button>
+                    </div>
+                </div>
+            </div>
+
+                 <div class="Menu-card">
+                <div class="Menu-card_image">
+                    <img src="assets/image 7.png" alt="pizzas img">
+                    <h2>ITEMS AT $19 
+                        <span style="float: right; transform: translateX(-20px);"><svg width="24" height="24" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="15" cy="15" r="15" fill="#FEBC2F"/>
+<path d="M15.0001 20.8252L8.67922 24.5454L10.0909 17.0749L4.77274 11.9038L11.966 11.007L15.0001 4.09082L18.034 11.007L25.2273 11.9038L19.9092 17.0749L21.3209 24.5454L15.0001 20.8252Z" fill="white"/>
+</svg> 4.4</span>
+                    </h2>
+                </div>
+
+                <div class="Menu-card_body">
+                    <div class="Menu-card_title">
+                    <div style="display:flex; justify-content: space-between;"><span>Italian•Pizza</span> <span style="transform: translateX(50px);">$20 for two</span></div>
+
+                    <div class="Menu-card_subtitles">Sector- 11, City <span style="float: right; transform: translateX(50px)">2.2 km</span></div>
+                    
+                    <button style="opacity: 85%;"><i class="ri-calendar-close-line"></i>No Seat Available</button>
+
+                    </div>
+                </div>
+            </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-section">
+        <h2 class="logo"><span>Burger</span>Point</h2>
       </div>
-    </div>
 
-    <div class="slogan">
-      Better food <br> for more people
-    </div>
-  </section>
-<div class="heading">
-    <h1>Order our best options</h1>
-</div>
-  
-
-  <section class="options">
-    
-    <div class="box1 box">
-        <h2>Special Offer</h2>
-        <p>Items at $19</p>
-        <button>Order Now</button>
-   </div>
-
-   <div class="box2 box">
-        <h2>Special Offer</h2>
-        <p>Items at $19</p>
-        <button>Order Now</button>
-   </div>
-
-   <div class="box3 box">
-        <h2>Special Offer</h2>
-        <p>Items at $19</p>
-        <button>Order Now</button>
-   </div>
-  </section>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-
-  <footer>
-
-    <div class="footpanel">
-        <div class="burgerpoint">
-            <h1><span>Burger</span>Point</h1>
-        </div>
-        <div class="company">
-            <ul>
-            <P>Company</P>
-            <a>About us</a>
-            <a>Contact us</a>
-            <a>FAQs</a>
-            <a>Terms</a>
-            <a>Privacy policy</a>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
         </ul>
+      </div>
 
-        </div>
+    
+      <div class="footer-section">
+        <h3>Address</h3>
+        <ul class="contact-info">
+          <li>
+            <i class="ri-map-pin-2-fill location-icon"></i> 
+            <div>
+              <strong>Location</strong>
+              <p>990 Sterling Bank Boulevard<br>
+              Opp Tuwo Place, Behind Fraser Suite,<br>
+              Central Area, Abuja</p>
+            </div>
+          </li>
+          <li>
+            <i class="ri-phone-fill phone-icon"></i> 
+            <span>09099125608</span>
+          </li>
+        </ul>
+      </div>
 
-        <div class="add">
-            
-            <ul>
-                <h2><i class="fa-solid fa-location-pin"></i>Address</h2>
-                <a>La, Street side</a>
-                <a><i class="fa-solid fa-mobile-screen"></i>578448949598</a>
-            </ul>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="socials">
+          <a href="#"><i class="ri-facebook-fill"></i></a>
+          <a href="#"><i class="ri-twitter-x-fill"></i></a>
+          <a href="#"><i class="ri-instagram-line"></i></a>
         </div>
-        
+      </div>
+
     </div>
   </footer>
 
-  
+
 
     
-
     <script src="script.js"></script>
 </body>
 </html>
