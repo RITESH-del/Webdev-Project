@@ -7,7 +7,7 @@
 
 :root {
     --primary-color: #FEBC2F;
-    --secondary-color: #aaa;
+    --secondary-color: #999;
 }
 
 html {
@@ -30,6 +30,7 @@ html {
     margin: 0px 5px;
     font-size: 110%;
 }
+
 .btn a {
     text-decoration: none;
     color: inherit;
@@ -113,6 +114,7 @@ html {
 
 .Home-form_header {
     font-size: 48px;
+    padding: 0px 40px;
     margin: 40px 20px;
     color: #f2f2f2;
 }
@@ -205,6 +207,7 @@ html {
     height: 200px;
     object-fit: contain;
 }
+
 .Menu-card_image {
     height: 200px;
 }
