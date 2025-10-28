@@ -1,0 +1,25 @@
+{
+  "name": "webdev-project",
+  "version": "1.0.0",
+  "description": "> [!Warning]\r >",
+  "main": "script.js",
+  "dependencies": {
+    "live-server": "^1.2.2",
+    "remixicon": "^4.6.0"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RITESH-del/Webdev-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RITESH-del/Webdev-Project/issues"
+  },
+  "homepage": "https://github.com/RITESH-del/Webdev-Project#readme"
+}
