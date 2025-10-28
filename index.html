@@ -167,16 +167,34 @@
     <div class="About-body">
 
         <div class="About-sidebar">
-            <h3 class="About-sidebar-tab">Mission <i class="ri-arrow-right-line"></i></h3>
+            <button
+             class="About-tablinks"
+            onclick="openTab(event, 'Mission')">
+            Mission <i class="ri-arrow-right-line"></i>
+        </button>
             <hr>
-            <h3 class="About-sidebar-tab">Vission</h3>
+            <button 
+             onclick="openTab(event, 'Vision')"
+             class="About-tablinks">Vision</button>
             <hr>
-            <h3 class="About-sidebar-tab">Values</h3>
+            <button 
+            onclick="openTab(event, 'Values')"
+            class="About-tablinks">Values</button>
         </div>
 
-        <div class="About-copy">
+        <div class="About-tab">
+        <div id="Mission" class="About-tabcontent">
             Our mission is to elevate the quality of life of the urban consumer by offering unparalleled convenience. what makes us tick. It’s what makes us get out of bed and say, “Let’s do this.
         </div>
+
+        <div id="Vision" class="About-tabcontent">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime laudantium saepe praesentium ipsa provident dolor quia deleniti ipsum quasi quo aperiam, velit aliquid, natus culpa, doloribus id dolorum suscipit magnam.
+        </div>
+
+        <div id="Values" class="About-tabcontent">
+            Our actions are strongly defined by the Swiggy values. Through ups, downs, and everything in between; Swiggsters put these values into practice in their everyday ways of working. Read on to get a taste of how Swiggsters live and breathe these values and how it forms the backbone of our culture.
+        </div>
+</div>
 
         <div class="About-image">
             <img src="assets/scooter.png" alt="scotter image">
@@ -333,7 +351,7 @@
   </footer>
 
 
-    <script src="script.js"></script>
+    <script src="scripts/AboutSidebar.js"></script>
 
     
 </body>

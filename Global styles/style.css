@@ -257,18 +257,33 @@ html {
     width: 300px;
 }
 
+.About-tablinks {
+    border: none;
+    outline: none;
+    background: inherit;
+    font-size: 24px;
+    font-weight: 550;
+}
 
-.About-sidebar h3, .About-copy {
+.About-tablinks, .About-tabcontent {
     color: var(--secondary-color);
-
 }
 
-.About-sidebar h3:hover {
+.About-tablinks:hover {
     color: var(--primary-color);
 }
 
-h3:first-child {
+.About-tablinks:first-child {
     color: var(--primary-color);
+}
+
+.About-tabcontent {
+    display: none;
+    width: 700px;
+}
+
+#Mission {
+    display: block;
 }
 
 .About-footer {
