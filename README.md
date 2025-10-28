@@ -2,11 +2,14 @@
 
 
 
-just type this in the CLI:
+just type these commands in the CLI:
+```{bash}
+> npm install
+```
 ```{bash}
 > npm run start
-```
-Or
-```
+
+OR
+
 > npm start
 ```

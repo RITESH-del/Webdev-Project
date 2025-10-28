@@ -263,6 +263,10 @@ html {
 
 }
 
+.About-sidebar h3:hover {
+    color: var(--primary-color);
+}
+
 h3:first-child {
     color: var(--primary-color);
 }
