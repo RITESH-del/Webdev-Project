@@ -3,9 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>IL Canto Cafe - DoorDash</title>
+    <link rel="stylesheet" href="../Global styles/order.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
 </head>
 <body>
-    
+    <!-- Header -->
+    <header class="header">
+        <div class="logo" onclick="window.location.href='index.html'">Burger<span>Point</span></div>
+        <div class="header-right">
+            <button class="address-btn">
+                 Your Address ▼
+            </button>
+            <button class="cart-btn">🛒 0</button>
+            <button class="sign-in">Sign In</button>
+            <button class="sign-up">Sign Up</button>
+        </div>
+    </header>
+ 
+    <!-- Address Banner -->
+    <div class="address-banner">
+        <h3>Get it delivered to your door</h3>
+        <div style="display: flex; gap: 12px; align-items: center;">
+            <div class="address-input">
+                <span>📍</span>
+                <input type="text" placeholder="Enter Your Address">
+            </div>
+            </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="#">Home</a> / <a href="#">San Francisco</a> / <a href="#">Lunch</a> / IL Canto Cafe
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <img src="https://images.unsplash.com/photo-1626804475297-41608ea09aeb?w=1200&h=400&fit=crop" alt="IL Canto Cafe" class="hero-image">
+        <div class="rating-badge">
+            <span class="star">★</span>
+            <span class="score">4.8</span>
+            <span class="label">IL Canto Cafe</span>
+        </div>
+        <div class="photo-count">
+            📷 24 photos
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h1 class="restaurant-title">IL Canto Cafe</h1>
+            
+            <div class="store-info">
+                <h3>Store Info</h3>
+                <span class="dash-pass">DashPass</span>
+                <div class="rating-info">⭐ 4.8 (10k+) •</div>
+                <div class="price-category">$$ • Cafe</div>
+                <button class="see-more-btn">See More</button>
+            </div>
+
+            <div class="full-menu">
+                <h4>Full Menu</h4>
+                <p>6:00 am - 9:40 pm</p>
+                
+                <ul class="menu-list">
+                    <li class="active">Featured Items</li>
+                    <li>Reviews</li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="restaurant-header">
+                <div>
+                    <div class="delivery-tabs">
+                        <button class="tab active">Delivery</button>
+                        <button class="tab">Pickup</button>
+                        <button class="tab">Group Order</button>
+                    </div>
+                    <div class="delivery-info">
+                        $0 delivery fee, first order<br>
+                        pricing & fees ⓘ
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Items Section -->
+            <section class="featured-section">
+                <div class="section-header">
+                    <h2>Featured Items</h2>
+                    <div class="nav-arrows">
+                        <button><i class="ri-arrow-left-s-line"></i></button>
+                        <button><i class="ri-arrow-right-s-line"></i></button>
+                    </div>
+                </div>
+
+                    <div class="featured-body">
+                        <div class="featured-card"></div>
+                        <div class="featured-card"></div>
+                        <div class="featured-card"></div>
+                        <div class="featured-card"></div>
+                        <div class="featured-card"></div>
+                    </div>
+            </section>
+
+            <!-- Reviews Section -->
+            <section class="reviews-section">
+                <div class="reviews-header">
+                    <h2>Reviews</h2>
+                    <div class="nav-arrows">
+                        <button class="next"><i class="ri-arrow-left-s-line"></i></button>
+                        <button class="prev"><i class="ri-arrow-right-s-line"></i></button>
+                    </div>
+                </div>
+                <div class="reviews-count">
+                    130+ ratings • 200+ public reviews
+                </div>
+
+            <div class="carousel">
+                <div class="reviews-container slides">
+                    <!-- Overall Rating Card -->
+                    <div class="overall-rating slide">
+                        <div class="rating-number">4.8</div>
+                        <div class="rating-details">
+                            <div>⭐⭐⭐⭐⭐</div>
+                            <div>130+ ratings</div>
+                        </div>
+                    </div>
+
+                    <!-- Review Card 1 -->
+                    <div class="review-card slide">
+                        <div class="review-header">
+                            <div class="reviewer-avatar" style="background: #FF6B6B;">S</div>
+                            <div class="reviewer-info">
+                                <h4>Sara Jean K ›</h4>
+                                <p>1 contribution</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>10/3/23 • DoorDash order</span>
+                        </div>
+                        <p class="review-text">
+                            Very good food! Service was great for work and the food was perfect. Always happy with the food I'm here. I'm hooked! I've gotten them at a...
+                        </p>
+                    </div>
+
+                    <!-- Review Card 2 -->
+                    <div class="review-card slide">
+                        <div class="review-header">
+                            <div class="reviewer-avatar" style="background: #4A90E2;">A</div>
+                            <div class="reviewer-info">
+                                <h4>Ali B ›</h4>
+                                <p>2 contributions</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>10/3/23 • DoorDash order</span>
+                        </div>
+                        <p class="review-text">
+                            This place is great! Food is so great, the portions are generous and the delicious, nutritious, and will enjoy. Food...
+                        </p>
+                    </div>
+
+                    <!-- Review Card 3 -->
+                    <div class="review-card slide">
+                        <div class="review-header">
+                            <div class="reviewer-avatar" style="background: #F5A623;">J</div>
+                            <div class="reviewer-info">
+                                <h4>Jeffree P ›</h4>
+                                <p>1 contribution</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>9/4/23 • DoorDash order</span>
+                        </div>
+                        <p class="review-text">
+                            I order from them twice a week at least, everything is always perfect and fresh. If I ordered the Chipotle Melt t...
+                        </p>
+                    </div>
+
+                     <!-- Review Card 2 -->
+                    <div class="review-card slide">
+                        <div class="review-header">
+                            <div class="reviewer-avatar" style="background: #4A90E2;">A</div>
+                            <div class="reviewer-info">
+                                <h4>Ali B ›</h4>
+                                <p>2 contributions</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>10/3/23 • DoorDash order</span>
+                        </div>
+                        <p class="review-text">
+                            This place is great! Food is so great, the portions are generous and the delicious, nutritious, and will enjoy. Food...
+                        </p>
+                    </div>
+
+                    <!-- Review Card 3 -->
+                    <div class="review-card slide">
+                        <div class="review-header">
+                            <div class="reviewer-avatar" style="background: #F5A623;">J</div>
+                            <div class="reviewer-info">
+                                <h4>Jeffree P ›</h4>
+                                <p>1 contribution</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>9/4/23 • DoorDash order</span>
+                        </div>
+                        <p class="review-text">
+                            I order from them twice a week at least, everything is always perfect and fresh. If I ordered the Chipotle Melt t...
+                        </p>
+                    </div>
+                </div>
+            </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="./scripts/reviews.js"></script>
+    <script src="./scripts/Slider.js"></script>
+    <script src="./scripts/OrderPage.js"></script>
+
 </body>
 </html>

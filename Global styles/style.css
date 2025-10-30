@@ -11,14 +11,15 @@
 }
 
 html {
-    display: flex;
-    flex-direction: column;
     background: #fff;
     scroll-behavior: smooth;
     font-family: Roboto;
     line-height: 1.6;
 } 
 
+.active {
+    color: var(--primary-color);
+}
 
 .btn {
     padding: 0.5em 0.8em;
@@ -167,6 +168,7 @@ html {
 }
 
 .Menu-btn {
+    cursor: pointer;
     padding: 5px;
     border-radius: 50%;
     border: 1px solid rgba(0,0,0,0.2);
@@ -183,14 +185,35 @@ html {
 }
 
 .Menu-carousel {
-    display: grid;
-    grid-auto-flow: column;
+    display: flex;
+    flex-direction: row;
     scroll-snap-type: x mandatory;
     overflow-x: auto;
+    overflow-y: hidden;
     padding: 20px 0px;
     scrollbar-width: none;
     scroll-behavior: smooth;
 }
+
+/* .carousel {
+position: relative;
+width: 80%;
+max-width: 1200px;
+overflow: hidden;
+display: flex;
+    flex-direction: row;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;    
+    padding: 20px 0px;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+} */
+
+/* Slides */
+/* .slides {
+display: flex;
+transition: transform 0.5s ease-in-out;
+} */
 
 .Menu-card {
     height: 320px;
@@ -199,8 +222,17 @@ html {
     border-radius: 12px;
     margin: 0 10px;
     box-shadow: 0.3em 0.5em 0.25em rgba(0,0,0,0.2);
-    overflow: hidden;
+    cursor: pointer;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
 }
+
+.Menu-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0.5em 0.7em 0.4em rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 
 .Menu-card_image img {
     width: 300px;
@@ -338,7 +370,7 @@ html {
     color: var(--secondary-color);
 }
 
-.tab:first-child {
+.tab.active {
     color: var(--primary-color);
     border-bottom: 1px solid var(--primary-color);
 }
@@ -347,11 +379,6 @@ html {
     color: var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
     cursor: pointer;
-}
-
-.tab:active {
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
 }
 
 .Menu-card_body button {
@@ -371,7 +398,7 @@ html {
     padding-right: 15px;
 }
 
-.tabContent {
+.tabcontent {
     display: flex;
     flex-direction: row;
     min-height: 700px;

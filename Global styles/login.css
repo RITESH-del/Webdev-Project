@@ -63,26 +63,21 @@ body {
   color: #fff;
   width: 100%;
   font-size: 14px;
+  
 }
 
 /* Button */
 .btn {
-  width: 100%;
-  padding: 12px;
+  padding: 12px 110px;
   border: none;
   background: #f1a500;
   color: #000;
   font-size: 16px;
   font-weight: bold;
   border-radius: 8px;
+  text-decoration: none;
   cursor: pointer;
   transition: 0.3s;
-  margin-top: 10px;
-}
-
-.btn a {
-  text-decoration: none;
-  color: inherit;
 }
 
 .btn:hover {

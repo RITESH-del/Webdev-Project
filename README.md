@@ -2,10 +2,11 @@
 
 
 
-just type these commands in the CLI:
+How to run this code in your Computer just type these cmd in the CLI:
 ```{bash}
 > npm install
-```then
+```
+then
 ```{bash}
 > npm run start
 

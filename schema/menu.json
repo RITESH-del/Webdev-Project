@@ -1,0 +1,50 @@
+[{
+    "price": "100",
+    "image": "assets/image 2.png",
+    "rating": 4.4,
+    "delivery_time": "10-15",
+    "item": "Pizza",
+    "location": "Sector-11"
+},{
+    "price": "100",
+    "image": "assets/image 3.png",
+    "rating": 4.4,
+    "delivery_time": "10-15",
+    "item": "Pizza",
+    "location": "Sector-11"
+},
+{
+    "price": "100",
+    "image": "assets/image 4.png",
+    "rating": 4.4,
+    "delivery_time": "10-15",
+    "item": "Pizza",
+    "location": "Sector-11"
+}
+,
+{
+    "price": "100",
+    "image": "/",
+    "rating": 4.4,
+    "delivery_time": "10-15",
+    "item": "Pizza",
+    "location": "Sector-11"
+},
+{
+    "price": "100",
+    "image": "assets/image 4.png",
+    "rating": 4.4,
+    "delivery_time": "10-15",
+    "item": "Pizza",
+    "location": "Sector-11"
+}
+,
+{
+    "price": "100",
+    "image": "/",
+    "rating": 4.4,
+    "delivery_time": "10-15",
+    "item": "Pizza",
+    "location": "Sector-11"
+}
+]
