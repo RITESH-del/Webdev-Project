@@ -2,7 +2,7 @@
 
 
 
-How to run this code in your Computer just type these cmd in the CLI:
+To run this code on your machine, just type these cmd in the CLI:
 ```{bash}
 > npm install
 ```
