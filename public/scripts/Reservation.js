@@ -1,3 +1,4 @@
+// Completed 
 function openRTab(event, tabName) {
   var i, tablinks;
 

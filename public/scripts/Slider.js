@@ -11,6 +11,7 @@ function showSlide(direction) {
        index = (index - 1 + totalSlides) % totalSlides;
    }
    slides.style.transform = `translateX(-${index * 30}%)`;
+   direction.setAttribute('disabled');
 }
 prev.addEventListener('click', () => showSlide('prev'));
 next.addEventListener('click', () => showSlide('next'));

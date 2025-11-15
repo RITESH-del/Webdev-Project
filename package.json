@@ -2,15 +2,20 @@
   "name": "webdev-project",
   "version": "1.0.0",
   "description": "> [!Warning]\r >",
-  "main": "script.js",
+  "main": "index.js",
   "dependencies": {
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
     "live-server": "^1.2.2",
+    "mongoose": "^8.19.2",
+    "nodemon": "^3.1.10",
     "remixicon": "^4.6.0"
   },
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "live-server --open=login.html"
+    "start": "live-server --open=login.html",
+    "dev": "concurrently \"nodemon Backend/server.js\"  \"live-server --open=login.html\""
   },
   "repository": {
     "type": "git",
@@ -21,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/RITESH-del/Webdev-Project/issues"
   },
-  "homepage": "https://github.com/RITESH-del/Webdev-Project#readme"
+  "homepage": "https://github.com/RITESH-del/Webdev-Project#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
 }

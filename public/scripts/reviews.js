@@ -9,7 +9,7 @@ async function loadData() {
     console.log(data);
 
 
-document.querySelector(".reviews-count").innerHTML=`${data.length}+ ratings • ${60}+ public reviews`
+document.querySelector(".reviews-count").innerHTML=`${data.length}+ ratings • ${80}+ public reviews`
 
 
 

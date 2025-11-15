@@ -2,7 +2,7 @@
 async function loadData() {
     let data;
    try {
-        const res = await fetch('../schema/menu.json'); 
+        const res =await fetch('../schema/menu.json'); 
         data = await res.json();
     } catch(error){
         console.log("Error", error.message);
