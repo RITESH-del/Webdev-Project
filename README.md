@@ -8,14 +8,5 @@ To run this code on your machine, just type these cmd in the CLI:
 ```
 then
 ```{bash}
-> npm run start
-
-OR
-
-> npm start
+> npm run dev
 ```
->[!Note]
-> - schema-> for json files    
-> - scripts-> for javascript files   
-> - Global styles-> for css files        
-> - assets-> for images/svg/video/music etc 
