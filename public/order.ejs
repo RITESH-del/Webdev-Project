@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IL Canto Cafe - DoorDash</title>
+    <link rel="stylesheet" href="/Global styles/style.css">
+    <link rel="stylesheet" href="/Global styles/order.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+
+    <style>
+.review-form {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.review-form h2 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.review-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s ease;
+}
+
+.review-form input:focus,
+.review-form select:focus,
+.review-form textarea:focus {
+    border-color: #ff4d4d;
+}
+
+.review-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.review-form button {
+    width: 100%;
+    padding: 12px;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.review-form button:hover {
+    background: #e43d3d;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <!-- <header class="header">
+        <div class="logo" onclick="window.location.href='index'">Burger<span>Point</span></div>
+        <div class="header-right">
+            <button class="address-btn">
+                 Your Address ▼
+            </button>
+            <button class="cart-btn">🛒 0</button>
+            <button class="sign-in" onclick="window.location.href='login.html'">Sign In</button>
+            <button class="sign-up">Sign Up</button>
+        </div>
+    </header> -->
+<%- include('./Layout/header.ejs') %>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="#">Home</a> / <a href="#">San Francisco</a> / <a href="#">Lunch</a> / IL Canto Cafe
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <img src=<%= image %> alt="IL Canto Cafe" class="hero-image">
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h1 class="restaurant-title">IL Canto Cafe</h1>
+            
+            <div class="store-info">
+                <h3>Store Info</h3>
+                <span class="dash-pass">DashPass</span>
+                <div class="rating-info">⭐ 4.8 (10k+) •</div>
+                <div class="price-category">$$ • Cafe</div>
+                <button class="see-more-btn">See More</button>
+            </div>
+
+            <div class="full-menu">
+                <h4>Full Menu</h4>
+                <p>6:00 am - 9:40 pm</p>
+                
+                <ul class="menu-list">
+                    <li class="active">Featured Items</li>
+                    <li>Reviews</li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="restaurant-header">
+                <div>
+                    <div class="delivery-tabs">
+                        <button class="tab active">Delivery</button>
+                        <button class="tab">Pickup</button>
+                        <button class="tab">Group Order</button>
+                    </div>
+                    <div class="delivery-info">
+                        $0 delivery fee, first order<br>
+                        pricing & fees ⓘ
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reviews Section -->
+            <section class="reviews-section">
+                <div class="reviews-header">
+                    <h2>Reviews</h2>
+                </div>
+                <div class="reviews-count">
+                    130+ ratings • <%= data.length %>+ public reviews
+                </div>
+
+            <div class="carousel">
+                <div class="reviews-container slides">
+                    <!-- Overall Rating Card -->
+                     <div class="overall-rating slide">
+                        <div class="rating-number">4.8</div>
+                        <div class="rating-details">
+                            <div>⭐⭐⭐⭐⭐</div>
+                            <div><%= data.length %>+ ratings</div>
+                        </div>
+                    </div>
+
+
+<% data.forEach((value, index) => { %>
+    <div class="review-card slide">
+    <div style="display: flex; justify-content: space-between;">
+        <div class="review-header">
+            <div class="reviewer-avatar" style="background: #4A90E2;">
+                <%= value.name.substring(0,1) %>
+            </div>
+
+            <div class="reviewer-info">
+                <h4><%= value.name %></h4>
+                <p><%= value.contributions %> contributions</p>
+            </div>
+        </div>
+
+        <div>
+    <button onclick="deleteReview('<%= value._id %>')" 
+        style="background:#eee; border:none; padding:6px 10px; cursor:pointer;">
+    <i class="ri-delete-bin-line" style="font-size:20px;"></i>
+</button>
+
+    <a href="/edit-review/<%= value._id %>" 
+   style="background:#eee; border:none; padding:1.5px 10px; cursor:pointer; display:inline-block; color: inherit">
+    <i class="ri-edit-2-line" style="font-size:20px;"></i>
+    </a>
+
+</div>
+
+    </div>
+        
+
+        <div class="review-rating">
+            <span class="stars"><%= value.star %></span>
+            <span><%= new Date(value.date).toLocaleDateString() %> • order</span>
+        </div>
+
+        <p class="review-text">
+            <%= value.description %>
+        </p>
+    </div>
+<% }) %>
+
+                </div>
+            </div>
+            </section>
+
+            <div>
+<form class="review-form" method="POST" action="/add-reviews">
+    <h2>Leave a Review</h2>
+    <label>Name</label>
+    <input type="text" name="name" placeholder="Your name" required>
+
+    <label>Contributions</label>
+    <input type="number" name="contributions" placeholder="Number of contributions" required>
+
+    <label>Rating</label>
+    <select name="star" required>
+        <option value="">Select rating</option>
+        <option value="★★★★★">★★★★★</option>
+        <option value="★★★★☆">★★★★☆</option>
+        <option value="★★★☆☆">★★★☆☆</option>
+        <option value="★★☆☆☆">★★☆☆☆</option>
+        <option value="★☆☆☆☆">★☆☆☆☆</option>
+    </select>
+
+    <label>Date</label>
+    <input type="date" name="date" required>
+
+    <label>Description</label>
+    <textarea name="description" placeholder="Write your review..." required></textarea>
+
+    <button type="submit">Submit Review</button>
+</form>
+
+            </div>
+
+        </main>
+    </div>
+
+    <%- include('./Layout/footer.ejs') %>
+
+    <!-- <script src="/scripts/reviews.js"></script> -->
+    <script src="/scripts/Slider.js"></script>
+    <script src="/scripts/OrderPage.js"></script>
+    <script>
+        async function deleteReview(id) {
+    await fetch(`/delete-review/${id}`, { method: 'DELETE' });
+    location.reload(); // or remove element from DOM
+}
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<form action="/update-review/<%= review._id %>" method="POST" 
+      style="max-width: 480px; margin: 20px auto; padding: 20px; border: 1px solid #d0d7de; border-radius: 6px; background:#fff;">
+
+    <h2 style="font-size:20px; margin-bottom:16px; font-weight:600; color:#24292f;">Edit Review</h2>
+
+    <label style="font-weight:600; display:block; margin-bottom:6px;">Name</label>
+    <input type="text" name="name" value="<%= review.name %>" 
+           style="width:100%; padding:8px; border:1px solid #d0d7de; border-radius:6px; margin-bottom:16px;">
+
+    <label style="font-weight:600; display:block; margin-bottom:6px;">Contributions</label>
+    <input type="number" name="contributions" value="<%= review.contributions %>" 
+           style="width:100%; padding:8px; border:1px solid #d0d7de; border-radius:6px; margin-bottom:16px;">
+
+    <label style="font-weight:600; display:block; margin-bottom:6px;">Rating</label>
+    <input type="text" name="star" value="<%= review.star %>" 
+           style="width:100%; padding:8px; border:1px solid #d0d7de; border-radius:6px; margin-bottom:16px;">
+
+    <label style="font-weight:600; display:block; margin-bottom:6px;">Date</label>
+    <input type="date" name="date" value="<%= review.date %>" 
+           style="width:100%; padding:8px; border:1px solid #d0d7de; border-radius:6px; margin-bottom:16px;">
+
+    <label style="font-weight:600; display:block; margin-bottom:6px;">Description</label>
+    <textarea name="description" 
+              style="width:100%; padding:8px; border:1px solid #d0d7de; border-radius:6px; height:110px; margin-bottom:20px;"><%= review.description %></textarea>
+
+
+    <!-- Buttons -->
+    <div style="display:flex; gap:10px;">
+        <button type="submit" 
+                style="background:#2da44e; border:none; color:#fff; padding:10px 16px; border-radius:6px; font-size:16px; font-weight:600; cursor:pointer;">
+            Save Changes
+        </button>
+
+        <a href="/MenuCard2"
+           style="background:#f6f8fa; border:1px solid #d0d7de; padding:10px 16px; border-radius:6px; 
+                  font-size:16px; font-weight:600; color:#24292f; cursor:pointer; text-decoration:none; display:inline-block;">
+            Cancel
+        </a>
+    </div>
+
+</form>

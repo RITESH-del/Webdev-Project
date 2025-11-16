@@ -11,7 +11,7 @@ async function loadData() {
 // console.log(data);
 
 const array = data.map((value, index) => {
-     const str = `<div class='Menu-card' onclick="window.location.href='order.html'">
+     const str = `<div class='Menu-card' onclick="window.location.href='/MenuCard${index}'">
     <div class='Menu-card_image'>
         <img src='${value.image}' alt='${"pizzas img"}'>
         <h2>ITEMS AT $${value.price}</h2>

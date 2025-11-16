@@ -11,7 +11,7 @@ btn.addEventListener("click", ()=>{
   );
 
   if (user) {
-    window.location.href = "../index.html";
+    window.location.href = "/Home";
   } else {
     alert("Invalid username or password");
   }

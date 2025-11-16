@@ -2,7 +2,7 @@
   "name": "webdev-project",
   "version": "1.0.0",
   "description": "> [!Warning]\r >",
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
     "dotenv": "^17.2.3",
     "ejs": "^3.1.10",
@@ -14,8 +14,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "live-server --open=login.html",
-    "dev": "concurrently \"nodemon Backend/server.js\"  \"live-server --open=login.html\""
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",

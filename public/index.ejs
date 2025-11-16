@@ -8,26 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
 </head>
 <body>
-    <header class="Header">
-        <div class="Header_logo">
-            <h1 class="Header_title"><span>Burger</span>Point</h1>
-        </div>
- 
-        <nav class="nav">
-            <ul class="nav_list">
-                <li class="nav_item"><a href="#HOME">Home</a></li>
-                <li class="nav_item"><a href="#MENU">Menu</a></li>
-                <li class="nav_item"><a href="#ABOUT">About us</a></li>
-                <li class="nav_item"><a href="#RESERVATION">Reservation</a></li>
-            </ul>
-        </nav>
 
-        <div class="Header_btn">
-            <button class="btn primary-btn" ><a href="login.html">Sign In</a></button>
-            <button class="btn outline-btn">Get the App <i class="ri-arrow-right-up-line"></i></button>
-        </div>
-
-    </header>
+<%- include('./Layout/navbar.ejs') %>
 
     <section id="HOME">
         <div class="Home-form">
@@ -65,7 +47,32 @@
         </div>
 
 <!--all the components of this div is rendered form menu.js  -->
-        <div class="Menu-carousel"></div>
+        <div class="Menu-carousel">
+            <% data.forEach((value, index) => { %>
+<div class="Menu-card" onclick="window.location.href='/MenuCard<%= index %>'">
+    <div class="Menu-card_image">
+        <img src="<%= value.image %>" alt="pizzas img">
+        <h2>ITEMS AT $<%= value.price %></h2>
+    </div>
+
+    <div class="Menu-card_body">
+        <div class="Menu-card_title">
+            <h2>
+                <svg width="24" height="24" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="15" cy="15" r="15" fill="#FEBC2F"/>
+                    <path d="M15.0001 20.8252L8.67922 24.5454L10.0909 17.0749L4.77274 11.9038L11.966 11.007L15.0001 4.09082L18.034 11.007L25.2273 11.9038L19.9092 17.0749L21.3209 24.5454L15.0001 20.8252Z" fill="white"/>
+                </svg>
+                <%= value.rating %> <span>• <%= value.delivery_time %> mins</span>
+            </h2>
+
+            <div class="Menu-card_subtitles"><%= value.item %></div>
+            <div class="Menu-card_subtitles"><%= value.location %></div>
+        </div>
+    </div>
+</div>
+<% }) %>
+
+        </div>
     </section>
 
     <section id="ABOUT">
@@ -213,59 +220,11 @@
         </div>
 </section>
 
-    <footer class="footer">
-    <div class="footer-container">
 
-      <div class="footer-section">
-        <h2 class="logo"><span>Burger</span>Point</h2>
-      </div>
-
-      <div class="footer-section">
-        <h3>Company</h3>
-        <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">FAQs</a></li>
-          <li><a href="#">Terms of Use</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-        </ul>
-      </div>
-
-    
-      <div class="footer-section">
-        <h3>Address</h3>
-        <ul class="contact-info">
-          <li>
-            <i class="ri-map-pin-2-fill location-icon"></i> 
-            <div>
-              <strong>Location</strong>
-              <p>990 Sterling Bank Boulevard<br>
-              Opp Tuwo Place, Behind Fraser Suite,<br>
-              Central Area, Abuja</p>
-            </div>
-          </li>
-          <li>
-            <i class="ri-phone-fill phone-icon"></i> 
-            <span>09099125608</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="footer-section">
-        <h3>Follow Us</h3>
-        <div class="socials">
-          <a href="#"><i class="ri-facebook-fill"></i></a>
-          <a href="#"><i class="ri-twitter-x-fill"></i></a>
-          <a href="#"><i class="ri-instagram-line"></i></a>
-        </div>
-      </div>
-
-    </div>
-  </footer>
-
+<%- include('./Layout/footer.ejs') %>
 
     <script src="scripts/AboutSidebar.js"></script>
-    <script src="scripts/MenuCard.js"></script>
+    <!-- <script src="scripts/MenuCard.js"></script> -->
     <script src="scripts/Slider.js"></script>
     <script src="scripts/Reservation.js"></script>
 
