@@ -16,9 +16,10 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'public'));
 // console.log(__dirname);
 
+connectDB();
+
 
 app.listen(Port, () => {
-    connectDB();
     console.log(`listening at http://localhost:${Port}/`);
 });
 

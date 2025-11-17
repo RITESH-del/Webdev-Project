@@ -1,5 +1,6 @@
 const menu = require('../Model/Menu.Model.js');
 const reviews = require('../Model/Reviews.Model.js');
+const User = require('../Model/Login.Model.js');
 const express = require('express');
 
 const router = express.Router();
@@ -8,6 +9,7 @@ const router = express.Router();
 router.get("/", (req, res)=>{
     res.render('login');
 })
+
 
 router.get('/Home', async (req, res)=>{
   const menuList = await menu.find();
@@ -106,12 +108,74 @@ router.get('/edit-review/:id', async (req, res) => {
   res.render('editReview.ejs', { review });
 });
 
-
+// Edit reviews 
 router.post('/update-review/:id', async (req, res) => {
   await reviews.findByIdAndUpdate(req.params.id, req.body);
   res.redirect('/MenuCard2');  // or back to the product page
 });
 
+//Login page setup
+router.post("/login-data", async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    // Check if fields exist
+    if (!email || !password) {
+      return res.status(400).json({ message: "Email and password are required" });
+    }
+
+    // Find user
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(400).json({ message: "User not found" });
+    }
+
+    // Compare password
+    const isMatch = await user.comparePassword(password);
+    if (!isMatch) {
+      return res.status(400).json({ message: "Invalid credentials" });
+    }
+
+    // Success
+    // res.status(200).json({ message: "Login successful", user });
+    res.redirect('home');
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Server error", error });
+  }
+});
+
+//registered users
+router.post("/register/data", async (req, res) => {
+  try {
+    const {email, password } = req.body;
+
+    if (!email || !password) {
+      return res.status(400).json({ message: "All fields are required" });
+    }
+
+    const exist = await User.findOne({ email });
+    if (exist) {
+      return res.status(400).json({ message: "Email already exists" });
+    }
+
+    const user = new User({
+      email,
+      password,   // gets hashed by mongoose pre-save hook
+    });
+
+    await user.save();
+
+    res.status(201).json({
+      message: "User saved successfully",
+      user,
+    });
+
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ message: "Server error", err });
+  }
+});
 
 
 
